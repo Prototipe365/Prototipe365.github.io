@@ -1,0 +1,1290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+ <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title></title>
+<script src="https://code.iconify.design/2/2.0.0/iconify.min.js"></script>
+
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+        min-width: 80%;
+        width: 250px;
+        margin: auto;
+    }
+    button:active {
+    box-shadow: none;
+    outline: none;
+}
+    
+     .divino {
+        font-size: 30px;
+        color: #cbcbcb;
+        text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.76);
+    }
+        .comun-F {
+            font-size: 50px;
+            color: #ffffff;
+            text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.76);
+        }
+        .poco-comun-E {
+            font-size: 50px;
+            color: #00FF00;
+            text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.76);
+        }
+        .raro-D {
+            font-weight: bolde;
+            font-size: 50px;
+            color: #0070FF;
+            text-shadow: 5px 5px 2px rgb(0, 0, 0);
+        }
+        .epico-C {
+            font-weight: bolder;
+            font-size: 50px;
+            color: #A335EE;
+            text-shadow: 5px 5px 2px rgb(0, 0, 0);
+        }
+        .legendario-B {
+
+            font-size: 50px;
+            color: #FFD700;
+            text-shadow: 5px 5px 2px #000000, 0 0 15px rgb(255, 215, 0), 0 0 15px rgb(255, 89, 0);
+        }
+        .mitico-A {
+            font-weight: bolder;
+            font-size: 50px;
+            color: #FF8000;
+            text-shadow: 5px 5px 2px #000000, 0 0 15px rgb(255, 215, 0), 0 0 15px rgb(255, 0, 0);
+    }
+        .exotico-S { 
+            font-size: 50px;
+    font-weight: bolder;
+    background: linear-gradient(50deg, #ff0000 5%, rgb(255, 0, 0) 12%, #ff5d00 40%, #ff3600 50%, #ff0000 100%);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+      animation: degradadoRojo1 10s infinite linear;
+    text-shadow: 0 0 6px rgba(255, 0, 0, 0), 0 0 12px rgba(255, 99, 71, 0), 0 0 18px rgba(139, 0, 0, 0);
+     filter: drop-shadow(5.8px 4.8px 0px rgb(0, 0, 0)); 
+}
+
+@keyframes degradadoRojo1 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+        
+        .divino-SS {
+            font-size: 50px;
+    font-weight: bolder;
+    background: linear-gradient(220deg, #C0C0C0, #A8A8A8, #FFFFFF, #D3D3D3, #A0A0A0);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        animation: degradadoPlateado1 5s infinite ease-in-out;
+         filter: drop-shadow(5.8px 4.8px 0px rgb(0, 0, 0)); 
+}
+    @keyframes degradadoPlateado1 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+    font-size: 36px;
+}    
+        
+   
+             .divino-plus-SSS {
+                     font-size: 50px;
+    font-weight: bolder;
+    background: linear-gradient(50deg, #00FFFF, #0070FF, #A020F0, #FF69B4, #00FF80, #00FFFF);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     animation: degradadoCyan2 15s infinite ease-in-out;             
+   filter: drop-shadow(5.9px 4.8px 0px rgb(0, 0, 0)); 
+    
+    }
+
+@keyframes degradadoCyan2 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+/*
+.botonGanar {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botonGanar:hover {
+  background-color: #45a049;
+}
+
+#botonContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .mensaje-clase {
+            font-size: 16px;
+            color: #4CAF50;
+            margin-top: 10px;
+        }*/
+/* Estilos para los botones *//*
+.botonGanar {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.botonGanar:hover {
+  background-color: #45a049;
+}
+
+#botonContenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}*/
+.perfil{
+    padding: 1px 10px 10px;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+    color: rgba(255, 255, 255, 0.91);
+    background-image: url(https://img.freepik.com/fotos-premium/tres-dragones-sentados-trono-llamas-luna-fondo-ai-generativo_901242-24286.jpg);
+    background-size: cover;
+    background-position: center
+    }
+.perfil .Dragon{
+    display: flex;
+   justify-content: center;
+    align-items: center;
+     background-color: rgba(28, 28, 28, 0.59);
+    width: 100%;
+    border-radius: 6px;
+    margin: 4px 0 8px;
+    height: 60px;
+    }
+.perfil #rango {
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin: 0;
+    font-size: 24px;
+    background: linear-gradient(50deg, #00FFFF, #0070FF, #A020F0, #FF69B4, #00FF80, #00FFFF);
+    background-size: 800%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+     animation: degradadoCyan2 15s infinite ease-in-out;             
+}
+
+@keyframes degradadoCyan2 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+    
+    
+    
+    
+    
+.perfil .message-box{
+  text-align: center;
+font-size: 16px;
+}
+.perfil .message-box p{
+   text-shadow: 0px 0px 5px rgb(20, 19, 30);
+    color: #ffffff;
+    font-weight: bold;
+    padding: 10px 0 12px;
+}
+.perfil h1{
+  font-size: 40px;
+    margin: 0;
+  text-shadow: 1px 1px 20px rgb(201, 0, 255); 
+    text-align: center
+}
+.perfil > div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.perfil div p{
+    margin: 0;
+    font-weight: bold;
+}
+/* TARJETA PARA LA LINEA DE CLASE*/
+/* TARJETA PARA LA LINEA DE CLASE*/
+/* TARJETA PARA LA LINEA DE CLASE*/
+.tarjeta  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} 
+.tarjeta div:nth-child(1){
+      width: 100%;
+    text-align: center;
+    font-size: 22px;
+    background-color: rgba(28, 28, 28, 0.59);
+    border-radius: 6px;
+}
+.tarjeta div:nth-child(2){
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+}
+.tarjeta div:nth-child(2){
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70px;
+}
+    /**/
+/*TARJETA DRAGON LA LINEA DE DRAGON*/  
+.tarjetaD > div > p {
+   font-weight: bold;
+    font-size: 16px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.76);
+}
+.tarjetaD > div p span{
+   font-weight: bold;
+    font-size: 20px;
+    color: gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.76);
+}
+    
+    
+    
+    
+/*
+.tarjeta  {
+    display: flex;
+    width: 100%;
+    height: 110px;
+    background-color: aqua
+}  
+.tarjeta div:nth-child(1){
+      width: 28%;
+    background-color: red;
+}
+.tarjeta div:nth-child(2){
+    display: flex;
+    justify-content: flex-end;
+    width: 60%;
+}
+ .tarjeta div:nth-child(2) > div{
+ width: 100%;
+}
+
+.tarjeta div:nth-child(2) div p:nth-child(1) span,
+.tarjeta div:nth-child(2) div > p span:nth-child(2) 
+    {
+    font-weight: bold;
+    font-size: 16px;
+    color: gold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.76);
+}
+.tarjeta div:nth-child(2) div > p strong
+{
+    font-size: 14px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.76);
+}
+.tarjeta div:nth-child(2) div > p span:nth-child(2) {
+    font-weight: bold;
+    font-size: 14px;
+    color: gold;
+}
+.tarjeta div:nth-child(2) div > div {
+    font-weight: bold;
+    font-size: 14px;
+    color: none;
+}
+.tarjeta div:nth-child(2) div > div{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.tarjeta div:nth-child(2) div >  strong{
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.76);
+}
+.tarjeta div:nth-child(2) div > div p{
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+.tarjeta div:nth-child(2) div > div p .epico-C{
+    display: flex;
+    align-items: flex-end;
+    height: 36px;
+}
+  
+    
+    
+   */ 
+/*PushPlay*/    
+    
+.Pushplay {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    align-items: center;
+}
+.Pushplay div{
+    display: flex;
+    text-align: center;
+}
+.Pushplay input{
+    width: 100%;
+    text-align: center;
+    border-radius: 0px 0px 0px 0px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+    
+.boton-dar {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background: linear-gradient(45deg, #32CD32, #ADFF2F); /* Verde brillante */
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 0px 0px 0px 0;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.boton-dar:hover {
+    background: linear-gradient(45deg, #32CD32, #ADFF2F); /* Verde brillante */
+opacity: 1;
+}
+
+.boton-quitar {
+    display: flex;
+    align-items: center;
+    margin: auto;
+    background: linear-gradient(45deg, #FF4500, #FF6347); /* Rojo anaranjado */
+    color: white;
+    font-weight: bold;
+    padding: 6px 20px;
+    border: none;
+    border-radius: 0px 0px 0px 0;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    font-size: 20px;
+    opacity: 0.8;
+}
+
+.boton-quitar:hover {
+    opacity: 1;
+     background: linear-gradient(45deg, #FF4500, #FF6347);
+}    
+   
+    
+    .ClaseGod{
+        margin-top: 1px;
+        font-size: 16px; 
+        font-style: italic;
+        text-align: center;
+        background-color: rgba(0, 139, 139, 0.31);
+        border-radius: 8px;
+        color: #0f0f0f;
+    }
+      .mensaje-clase{
+    font-weight: bolder;
+    background: linear-gradient(220deg, #e2e2e2, #cbcbcb, #FFFFFF, #D3D3D3, #d3d3d3);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+        animation: degradadoPlateado1 10s infinite ease-in-out;
+         filter: drop-shadow(5.8px 4.8px 1px rgb(0, 0, 0)); 
+}
+    @keyframes degradadoPlateado1 {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+    font-size: 36px;
+}   
+    .mensaje-clase::before {
+    -webkit-text-fill-color: aqua;
+    content: "🐲: "; /* Emoji */
+}
+    
+    
+    
+    #mensajeDestino{
+        margin-top: 1px;
+        font-size: 16px; 
+        font-style: italic;
+        text-align: center;
+        background-color: rgba(0, 139, 139, 0.31);
+        border-radius: 8px;
+        color: #0f0f0f;
+    }
+    
+     
+     #mensajeRango,
+    #mensajeRango9{
+        margin-top: 1px;
+        font-size: 16px; 
+        font-style: italic;
+        text-align: center;
+        background-image: url("https://img.freepik.com/fotos-premium/dragon-espacio-estrellas-palabra-dragon-el_900775-19704.jpg");
+        background-size: cover;
+        background-position: center;
+        border-radius: 8px;
+        color: #ffffff;
+        position: fixed;
+        top: 42%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 240px;
+        padding: 20px 8px;
+        background-color: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        border-radius: 8px;
+        text-align: center;
+        
+    }
+   /* .estadisticas{}   
+    {position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background-color: #f0f0f0; padding: 10px; border: 2px solid #000; border-radius: 5px; z-index: 1000;}
+{position: fixed; top: 10px; left: 50%; transform: translateX(-50%); background-color: #f0f0f0; padding: 10px; border: 2px solid #000; border-radius: 5px; z-index: 1000;}
+    */
+    
+    
+     /* Estilo para el botón que abre la ventana */
+    .open-btn {
+      cursor: pointer;
+      font-size: 24px;
+      border: none;
+      background: none;
+        width: 100%;
+        text-align: start;
+        font-size: 14px;
+        color: white;
+    }
+
+    /* Estilo de la ventana emergente (inicialmente oculta) */
+    .popup {
+        z-index: 999;
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      width: 220px;
+      text-align: center;
+      color: #1a1a1a;
+        box-shadow: 0 0 5px black;
+    }
+
+  
+    /* Estilo para el botón de cierre dentro de la ventana */
+    .controls button.close-btn {
+      padding: 5px 10px;
+      background-color: #ff4747;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+.close-btn {
+      background-color: rgb(241, 241, 241);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 5px 10px ;
+    }
+    .close-btn:hover {
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    }
+    #botonContenedor .botonEspecial{
+        width: 160px;
+        margin-top: 1px;
+        font-size: 16px; 
+        text-align: center;
+        border-radius: 8px;
+        background: linear-gradient(45deg, #ffd700, #ff8c00);
+        color: #ffffff; 
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.78);
+        padding: 5px;
+                    /* Rojo anaranjado */
+        color: white;
+        border-color: rgba(34, 21, 47, 0.39);
+        position: fixed;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0px 1px 5px rgba(138, 133, 166, 0.74); /* Sombra roja suave */
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    #botonContenedor .botonEspecial:hover{
+    box-shadow: 0px 6px 10px rgba(138, 133, 166, 0.41); /* Más brillo */
+transform: translate(-50%, -60%);
+    }
+   #clearCacheButton{
+       display: flex;
+       justify-content: center;
+       align-content: center;
+       align-items: center;
+       justify-items: center;
+       font-size: 30px;
+       text-align: center;
+       margin: 10px auto 0;
+       border: none;
+       border-radius: 90%;
+       padding: 5px;
+       cursor: pointer;
+       background-color: red;
+       color: white;
+    }
+     #clearCacheButton:hover{
+       box-shadow: 0 0 3px black;
+    }
+    </style>
+</head>
+<body>
+    
+     
+    <div class="perfil">
+        <button class="open-btn" id="openBtn">📋 FAQ</button>
+         <p class="Dragon"><!--<strong></strong>--> <span id="rango">El Fragmento más Brillante</span></p>
+        <div class="tarjetaD">
+                <h1>🐉</h1> 
+            <div>
+            <p><strong>🌀 Poder: </strong> <span id="poder">0</span></p>
+            <p><strong>💰 Money: </strong> <span id="monedas">0</span></p>
+            </div>
+        </div>
+        <div class="message-box">
+        <p class="message" id="message"></p>
+    </div>
+      <div class="tarjeta">
+  <!-- Mostrar el poder, el personaje y el rango -->
+        <!-- Mostrar el poder, el personaje y el rango -->
+        <div>
+           <strong>⭐ Clase ⭐</strong>
+        </div>
+           <div>
+               <p><span id="claseSer">F</span></p>
+               <h1>👁️</h1> 
+          </div>
+             <div class="ClaseGod">
+                  <p id="mensajeClase" class="mensaje-clase" style="display:none;" ></p> <!-- Mensaje de clase -->
+            </div>
+    </div>  
+</div>
+<div class="Pushplay">
+  <!-- Input para agregar monedas manualmente -->
+    <div>
+  <div>
+    <input type="number" id="inputMonedas" placeholder="Cantidad de Monedas" min="1" oninput="validarNumero(this)"/>
+  </div>
+
+  <!-- Botón para incrementar poder -->
+  <button class="boton-dar" onclick="darMoneda()">+ <span class="iconify" data-icon="twemoji:coin"></span></button>
+    </div>
+    <div>
+  <!-- Input para arrebatar dinero -->
+  <div>
+    <input type="number" id="inputArrebatar" placeholder="Cantidad de Dinero a Arrebatar" min="1" maxlength="2" oninput="validarNumero(this)"/>
+  </div>
+
+  <!-- Botón para arrebatar poder -->
+  <button class="boton-quitar" id="arrebatarBtn" onclick="arrebatarDinero()" disabled>-<span class="iconify" data-icon="twemoji:coin"></span></button>
+    </div>
+</div>
+  <!-- Mensaje informativo que aparece solo cuando se arrebata dinero -->
+    <p id="mensajeDestino" style="display: none;">
+   🐲: "Tu propósito es más grande que cualquier tesoro. ¡Vuelve al camino!"
+  </p>
+<!-- Aquí agregas el HTML para los mensajes -->
+    
+    
+    <div class="fondo-animado">
+<div id="mensajeRango" style="display: none;"></div>
+<div id="mensajeRango9" style="display: none;"></div>
+    </div>
+  <!-- Mensaje especial para avanzar al rango 9 
+  <p id="mensajeRango9" style="margin-top: 10px; font-size: 16px; font-style: italic; display: none;">
+    Para el rango 9 tienes que recordar más hasta ahora.
+  </p>-->
+    
+ <!-- Ventana emergente -->
+    <div class="popup" id="popup">
+      <p>⚙️ Configuracion</p>
+      <div class="estadisticas">
+          <p>
+El Dragón del Abismo te ha encontrado. Herido y debilitado, te ha aceptado como discípulo. Ayúdale a recuperar su poder, dándole monedas para restaurar su fuerza.</p>
+    <p><strong>Rango siguiente:</strong> <span id="rangoSiguiente">Entidad Etérea</span></p>
+    <p><strong>Falta para el siguiente rango:</strong> <span id="faltaParaSiguiente">100</span> poder</p>
+  </div>
+      <button class="close-btn" id="closeBtn">❌</button>
+    </div>  
+    
+    
+  <!-- Mostrar información del siguiente rango -->
+  
+<!-- Contenedor donde se colocarán los botones -->
+<div id="botonContenedor"></div>
+<!-- El mensaje de rango será insertado aquí 
+<div id="mensajeRango" style="display: none; background-color: rgba(0, 0, 0, 0.8); color: white; padding: 10px; border-radius: 5px; position: fixed; top: 10%; left: 50%; transform: translateX(-50%); z-index: 1000;">
+</div>-->
+
+
+ <script>
+     let rangoAnterior = ""; // Variable para guardar el rango anterior
+
+        let poder = 0; // Poder inicial
+        let monedas = 0; // Monedas iniciales
+        const maxMonedas = 1000000; // Máximo de monedas
+        const maxPoder = 9999; // Máximo de poder
+
+      // Lista de rangos con los valores de poder necesarios
+const rangos = [
+  { rango: "El Fragmento más Brillante", poderNecesario: 0, mensaje: "¡Has alcanzado el rango: El Fragmento más Brillante!" },
+  { rango: "Entidad Etérea", poderNecesario: 100, mensaje: "¡Has alcanzado el rango: Entidad Etérea!" },
+  { rango: "Dragón Esqueleto", poderNecesario: 250, mensaje: "¡Has alcanzado el rango: Dragón Esqueleto!" },
+  { rango: "Dragón Renacido", poderNecesario: 475, mensaje: "¡Has alcanzado el rango: Dragón Renacido!" },
+  { rango: "Dragón Despertado", poderNecesario: 825, mensaje: "¡Has alcanzado el rango: Dragón Despertado!" },
+  { rango: "Dragón Trascendental", poderNecesario: 1345, mensaje: "¡Has alcanzado el rango: Dragón Trascendental!" },
+  { rango: "Dragón Supremo", poderNecesario: 2150, mensaje: "¡Has alcanzado el rango: Dragón Supremo!" },
+  { rango: "Dragón del Abismo", poderNecesario: 3300, mensaje: "¡Has alcanzado el rango: Dragón del Abismo!" },
+  { rango: "Abominación Desoladora", poderNecesario: 5400, mensaje: "¡Has alcanzado el rango: Abominación Desoladora!" }
+];
+
+        // Lista de clases con los valores de monedas necesarias
+        const clases = [
+            { clase: "SSS", dineroNecesario: 800000, mensaje: "¡Eres una leyenda viviente!" },
+            { clase: "SS", dineroNecesario: 600000, mensaje: "¡Imparable, sigues ascendiendo!" },
+            { clase: "SA", dineroNecesario: 400000, mensaje: "¡Tu poder está creciendo a pasos agigantados!" },
+            { clase: "B", dineroNecesario: 200000, mensaje: "¡Has alcanzado un gran nivel!" },
+            { clase: "C", dineroNecesario: 100000, mensaje: "¡Un buen avance, pero aún tienes mucho camino por recorrer!" },
+            { clase: "D", dineroNecesario: 50000, mensaje: "¡Todavía te queda mucho por mejorar!" },
+            { clase: "E", dineroNecesario: 10, mensaje: "¡Eres un novato, pero tienes potencial!" },
+            { clase: "F", dineroNecesario: 0, mensaje: "¡Todavía no has comenzado tu viaje!" }
+        ];
+
+        let rango9MensajeMostrado = false; // Controla si el mensaje ha sido mostrado
+        let claseAnterior = "F"; // Variable para rastrear la clase anterior
+
+        // Cargar los valores guardados en el localStorage si existen
+        function cargarValores() {
+            if (localStorage.getItem("poder") !== null) {
+                poder = parseInt(localStorage.getItem("poder"));
+            }
+            if (localStorage.getItem("monedas") !== null) {
+                monedas = parseInt(localStorage.getItem("monedas"));
+            }
+            if (localStorage.getItem("rango9MensajeMostrado") !== null) {
+                rango9MensajeMostrado = JSON.parse(localStorage.getItem("rango9MensajeMostrado"));
+            }
+
+            // Actualizar la visualización inicial
+            document.getElementById('poder').innerText = poder;
+            document.getElementById('monedas').innerText = monedas;
+            actualizarRango();
+            actualizarClaseSer();
+            actualizarInfoSiguienteRango();
+            actualizarBotonArrebatar();
+        }
+
+        // Guardar los valores en el localStorage
+        function guardarValores() {
+            localStorage.setItem("poder", poder);
+            localStorage.setItem("monedas", monedas);
+            localStorage.setItem("rango9MensajeMostrado", JSON.stringify(rango9MensajeMostrado));
+        }
+
+        // Habilitar o deshabilitar el botón Arrebatar Dinero
+        function actualizarBotonArrebatar() {
+            const arrebatarBtn = document.getElementById('arrebatarBtn');
+            if (poder > 0) {
+                arrebatarBtn.disabled = false;
+            } else {
+                arrebatarBtn.disabled = true;
+            }
+        }
+
+        function darMoneda() {
+            const cantidadMonedas = parseInt(document.getElementById('inputMonedas').value);
+
+            if (!isNaN(cantidadMonedas) && cantidadMonedas > 0) {
+                if (monedas + cantidadMonedas <= maxMonedas) {
+                    monedas += cantidadMonedas;
+                    poder = Math.min(Math.floor((monedas / maxMonedas) * maxPoder), maxPoder);
+
+                    if (poder >= 5499 && !rango9MensajeMostrado) {
+                        monedas = 0;
+                        poder = 0;
+                        document.getElementById('monedas').innerText = monedas;
+                        document.getElementById('poder').innerText = poder;
+                        mostrarMensajeRango9();
+                        rango9MensajeMostrado = true;
+                    }
+
+                    document.getElementById('poder').innerText = poder;
+                    document.getElementById('monedas').innerText = monedas;
+                    actualizarRango();
+                    actualizarClaseSer();
+                    actualizarInfoSiguienteRango();
+                    guardarValores();
+                }
+                document.getElementById('inputMonedas').value = '';
+                actualizarBotonArrebatar();
+            }
+        }
+
+        function arrebatarDinero() {
+            const cantidadArrebatar = parseInt(document.getElementById('inputArrebatar').value);
+
+            if (!isNaN(cantidadArrebatar) && cantidadArrebatar > 0) {
+                monedas = Math.max(monedas - cantidadArrebatar, 0);
+                poder = Math.max(Math.floor((monedas / maxMonedas) * maxPoder), 0);
+                poder = Math.max(poder, 0);
+
+                document.getElementById('poder').innerText = poder;
+                document.getElementById('monedas').innerText = monedas;
+                actualizarRango();
+                actualizarClaseSer();
+                const mensajeDestino = document.getElementById('mensajeDestino');
+                mensajeDestino.style.display = 'block';
+                setTimeout(() => {
+                    mensajeDestino.style.display = 'none';
+                }, 5000);
+                guardarValores();
+            }
+
+            document.getElementById('inputArrebatar').value = '';
+            actualizarBotonArrebatar();
+        }
+
+        function actualizarRango() {
+  // Encontrar el rango correspondiente según el poder
+  let rangoActual = "El Fragmento más Brillante"; // Por defecto
+  for (let i = rangos.length - 1; i >= 0; i--) {
+    if (poder >= rangos[i].poderNecesario) {
+      rangoActual = rangos[i].rango;
+      break;
+    }
+  }
+
+  // Mostrar el rango actual en la página
+  document.getElementById('rango').innerText = rangoActual;
+
+  // Mostrar el mensaje personalizado si el rango cambia
+  if (rangoActual !== rangoAnterior) {
+    mostrarMensajeRango(rangoActual); // Mostrar mensaje para el nuevo rango
+    rangoAnterior = rangoActual; // Guardar el rango actual como el anterior
+  }
+}
+
+
+        function actualizarClaseSer() {
+            let claseSer = "F"; // Por defecto
+            let mensajeClase = "";
+            let colorClase = "gray";  // Color por defecto
+            let textshadowClase = "";  // Sombra al texto
+            for (let i = clases.length - 1; i >= 0; i--) {
+                if (monedas >= clases[i].dineroNecesario) {
+                    claseSer = clases[i].clase;
+                    mensajeClase = clases[i].mensaje;
+                    break;
+                }
+            }
+
+            document.getElementById('claseSer').innerText = claseSer;
+
+            // Si la clase ha cambiado, mostramos el mensaje y lo ocultamos después de 10 segundos
+            if (claseSer !== claseAnterior) {
+                const mensajeElemento = document.getElementById('mensajeClase');
+                mensajeElemento.style.display = 'block';
+                mensajeElemento.innerText = mensajeClase;
+
+           
+              setTimeout(() => {
+                    mensajeElemento.style.display = 'none';
+                }, 10000);
+            }
+
+            claseAnterior = claseSer;
+        }
+
+        function actualizarInfoSiguienteRango() {
+            let siguienteRango = "N/A";
+            let faltaParaSiguiente = 0;
+            for (let i = 0; i < rangos.length; i++) {
+                if (poder < rangos[i].poderNecesario) {
+                    siguienteRango = rangos[i].rango;
+                    faltaParaSiguiente = rangos[i].poderNecesario - poder;
+                    break;
+                }
+            }
+
+            document.getElementById('rangoSiguiente').innerText = siguienteRango;
+            document.getElementById('faltaParaSiguiente').innerText = faltaParaSiguiente;
+        }
+
+
+function mostrarMensajeRango(rango) {
+  let mensaje = "";
+  switch (rango) {
+    case "El Fragmento más Brillante":
+      mensaje = "🐲: Soy apenas un fragmento de lo que fui. Tráeme monedas y juntos iniciaremos mi resurgir.";
+      break;
+    case "Entidad Etérea":
+      mensaje = "🐲: Mi esencia empieza a tomar forma nuevamente. Sigue trayendo monedas, aprendiz, y mi fuerza crecerá.";
+      break;
+    case "Dragón Esqueleto":
+      mensaje = "🐲: La estructura de mi ser comienza a surgir. Más monedas me permitirán reconstruirme por completo.";
+      break;
+    case "Dragón Renacido":
+      mensaje = "🐲: He renacido con carne y escamas, pero aún soy débil. Necesito más monedas para fortalecerme.";
+      break;
+    case "Dragón Despertado":
+      mensaje = "🐲: Estoy despierto y veo el mundo con nuevos ojos. Tráeme monedas y mi poder se expandirá.";
+      break;
+    case "Dragón Trascendental":
+      mensaje = "🐲: Mi forma trascendental es solo el comienzo. Estoy más allá de la carne y el hueso, pero mi potencial aún no está completo. Sigue trayendo monedas, y juntos alcanzaremos el poder definitivo que cambiará todo a nuestro alrededor.";
+      break;
+    case "Dragón Supremo":
+      mensaje = "🐲: Has logrado que mi poder alcance niveles casi incomparables, aprendiz. Soy un Dragón Supremo, pero en mi interior sé que puedo ir más allá. Solo un esfuerzo más, más monedas, y alcanzaremos juntos una grandeza que trasciende la imaginación.";
+      break;
+    case "Dragón del Abismo":
+      mensaje = "🐲: Ahora soy el Dragón del Abismo, un ser que personifica la oscuridad y la fuerza inquebrantable. Mi poder ya asusta incluso a los cielos, pero hay algo más que anhelo. Continúa trayéndome monedas, aprendiz, y desataré el verdadero abismo.";
+      break;
+    case "Abominación Desoladora":
+      mensaje = "🐲: Finalmente, he despertado como la Abominación Desoladora, el pináculo del poder absoluto. Mi forma inspira terror y reverencia en igual medida. Gracias, aprendiz, por tu inquebrantable lealtad. Juntos, hemos resurgido de las cenizas para reclamar el universo entero.";
+      break;
+    default:
+      mensaje = "Rango desconocido.";
+      break;
+  }
+
+  const mensajeRango = document.getElementById('mensajeRango');
+  mensajeRango.innerText = mensaje;
+  mensajeRango.style.display = 'block';
+
+  // Ocultar el mensaje después de 5 segundos
+  setTimeout(() => {
+    mensajeRango.style.display = 'none';
+  }, 9000);
+}
+
+
+//////
+
+        function mostrarMensajeRango9() {
+            const mensajeRango9 = document.getElementById('mensajeRango9');
+            mensajeRango9.style.display = 'block';
+            setTimeout(() => {
+                mensajeRango9.style.display = 'none';
+            }, 9000);
+        }
+
+        function actualizarClaseSer() {
+            let claseSer = "Iniciado";
+            let mensajeClase = "";
+          //  let fontsizeClase = ""; clase
+            const claseElemento = document.getElementById('claseSer');
+
+    // Lista de todas las posibles clases CSS
+    const clasesCSS = [
+        "divino-plus-SSS",
+        "divino-SS",
+        "exotico-S",
+        "mitico-A",
+        "legendario-B",
+        "epico-C",
+        "raro-D",
+        "poco-comun-E",
+        "comun-F",
+        "divino"
+    ];
+
+    // Elimina todas las clases existentes antes de añadir la nueva
+    clasesCSS.forEach(clase => claseElemento.classList.remove(clase));
+            
+            if (monedas >= 1000000) {
+                claseSer = "SSS";
+                mensajeClase = "¡Lo has logrado, joven aprendiz! Has superado todos los obstáculos y alcanzado el nivel más alto. Eres una leyenda viviente, y el poder que buscas ahora es tuyo.";
+                clasesCSS.forEach(clase => claseElemento.classList.remove(clase));
+                claseElemento.classList.add("divino-plus-SSS");
+            } else if (monedas >= 500000) {
+                claseSer = "SS";
+                mensajeClase = "Tu poder está a punto de alcanzar su máxima expresión, pero aún queda un último paso. La grandeza está al alcance de tu mano.";
+                claseElemento.classList.add("divino-SS");
+            } else if (monedas >= 100000) {
+                claseSer = "S";
+                mensajeClase = "Estás alcanzando niveles extraordinarios, pero aún no has tocado la cima. El verdadero poder requiere esfuerzo constante. Sigue adelante.";
+        claseElemento.classList.add("exotico-S");                
+            } else if (monedas >= 20000) {
+                claseSer = "A";
+                mensajeClase = "Tu poder crece rápidamente, pero aún no has tocado el límite de lo que eres capaz. No te confíes, la cima es solo para aquellos que siguen luchando con todo.";
+        claseElemento.classList.add("mitico-A");
+            } else if (monedas >= 12000) {
+                claseSer = "B";
+                mensajeClase = "Has llegado lejos, pero aún tienes mucho que conquistar. Solo los más decididos llegarán a la cima.";
+        claseElemento.classList.add("legendario-B");
+            } else if (monedas >= 8000) {
+                claseSer = "C";
+                mensajeClase = "Un avance, pero aún queda mucho por recorrer. No te detengas aquí, joven aprendiz. Tu potencial es mucho mayor de lo que crees.";
+        claseElemento.classList.add("epico-C");
+            } else if (monedas >= 3000) {
+                claseSer = "D";
+                mensajeClase = "Ya estás dejando atrás los primeros obstáculos, pero recuerda, la verdadera prueba comienza ahora. Sigue adelante, el camino es largo.";
+        claseElemento.classList.add("raro-D");
+            } else if (monedas >= 1000) {
+                claseSer = "E";
+                mensajeClase = "Un avance, pero aún queda mucho por recorrer. No te detengas aquí, joven aprendiz. Tu potencial es mucho mayor de lo que crees.";
+        claseElemento.classList.add("poco-comun-E");
+            } else if (monedas >= 100) {
+                claseSer = "F";
+                mensajeClase = "Has dado el primer paso, mortal. Tu camino apenas comienza. No subestimes la importancia de empezar desde lo más bajo.";
+        claseElemento.classList.add("comun-F");
+            } else {
+                claseSer = "Iniciado";
+                mensajeClase = "Este es solo el comienzo, mortal. Si superas esta etapa, entonces podré ver tu potencial.";
+        claseElemento.classList.add("divino");
+               // fontsizeClase = "30px"; Sombra al texto
+         
+}
+
+            document.getElementById('claseSer').innerText = `${claseSer}`;
+ // Cambia el color del texto de la clase
+          //  document.getElementById('claseSer').style.fontSize = fontsizeClase;
+            
+            if (claseSer !== claseAnterior) {
+                const mensajeElemento = document.getElementById('mensajeClase');
+                mensajeElemento.style.display = 'block';
+                mensajeElemento.innerText = mensajeClase;
+
+                setTimeout(() => {
+                    mensajeElemento.style.display = 'none';
+                }, 500000);
+            }
+
+            claseAnterior = claseSer;
+        }
+
+        actualizarBotonArrebatar();
+        actualizarRango();
+        actualizarClaseSer();
+        actualizarInfoSiguienteRango();
+        cargarValores();
+    </script>
+
+<script>
+ let botonesActivos = []; // Array para almacenar los botones actualmente activos
+const botonesConfigurados = [
+  { id: 1, hora: 9, minuto: 30, duracion: 4500000, valor: 2 },
+  { id: 2, hora: 11, minuto: 00, duracion: 4500000, valor: 4 },
+  { id: 3, hora: 12, minuto: 30, duracion: 7000000, valor: 6 },
+  { id: 4, hora: 14, minuto: 30, duracion: 9900000, valor: 8 },
+  { id: 5, hora: 17, minuto: 30, duracion: 7000000, valor: 10 },
+];
+
+// Almacenar la fecha actual para determinar el cambio de día
+const fechaActual = new Date().toDateString();
+
+// Recuperar los botones presionados y activos desde localStorage
+let botonesPresionados = JSON.parse(localStorage.getItem('botonesPresionados')) || {};
+if (botonesPresionados.fecha !== fechaActual) {
+  // Reiniciar los datos si es un nuevo día
+  botonesPresionados = { fecha: fechaActual, botones: [] };
+  localStorage.setItem('botonesPresionados', JSON.stringify(botonesPresionados));
+}
+
+// Función para crear un botón dinámicamente
+function crearBoton(duracionRestante, valor, id) {
+  const boton = document.createElement('button');
+  boton.innerText = `Ofrecer ${valor} Monedas`;
+  boton.classList.add('botonEspecial');
+
+  // Agregar evento al botón
+  boton.addEventListener('click', () => {
+    monedas += valor; // Incrementar monedas
+    // Asegurar que el poder no supere el máximo
+    poder = Math.min(Math.floor((monedas / maxMonedas) * maxPoder), maxPoder);
+
+    // Actualizar la visualización
+    document.getElementById('monedas').innerText = monedas;
+    document.getElementById('poder').innerText = poder;
+
+    actualizarInfoSiguienteRango(); // Actualizar rango
+    guardarValores(); // Guardar valores en localStorage
+
+    boton.remove(); // Eliminar botón al hacer clic
+
+    // Marcar el botón como presionado
+    botonesPresionados.botones.push(id);
+    localStorage.setItem('botonesPresionados', JSON.stringify(botonesPresionados));
+  });
+
+  // Agregar el botón al contenedor
+  document.getElementById('botonContenedor').appendChild(boton);
+
+  // Eliminar el botón automáticamente después de la duración restante
+  setTimeout(() => {
+    if (boton.parentElement) boton.remove();
+  }, duracionRestante);
+}
+
+// Función para verificar y crear botones pendientes al cargar la página
+function verificarBotonesPendientes() {
+  const ahora = new Date().getTime();
+  const botonesGuardados = JSON.parse(localStorage.getItem('botonesActivos')) || [];
+
+  botonesGuardados.forEach((boton) => {
+    const tiempoRestante = boton.fin - ahora;
+    if (tiempoRestante > 0 && !botonesPresionados.botones.includes(boton.id)) {
+      crearBoton(tiempoRestante, boton.valor, boton.id); // Crear botón con tiempo restante
+    }
+  });
+}
+
+// Función para comprobar si un botón debe mostrarse
+function verificarBotones() {
+  const ahora = new Date();
+  const horaActual = ahora.getHours();
+  const minutoActual = ahora.getMinutes();
+  const ahoraMilisegundos = ahora.getTime();
+
+  botonesConfigurados.forEach((config) => {
+    if (
+      horaActual === config.hora &&
+      minutoActual === config.minuto &&
+      !botonesPresionados.botones.includes(config.id) &&
+      !botonesActivos.some((boton) => boton.id === config.id)
+    ) {
+      // Calcular tiempo de finalización y guardar en localStorage
+      const tiempoFin = ahoraMilisegundos + config.duracion;
+      const nuevoBoton = { id: config.id, fin: tiempoFin, valor: config.valor };
+      botonesActivos.push(nuevoBoton);
+
+      // Actualizar almacenamiento
+      const botonesGuardados = JSON.parse(localStorage.getItem('botonesActivos')) || [];
+      botonesGuardados.push(nuevoBoton);
+      localStorage.setItem('botonesActivos', JSON.stringify(botonesGuardados));
+
+      crearBoton(config.duracion, config.valor, config.id); // Crear botón
+    }
+  });
+}
+
+// Revisar cada minuto si hay botones que mostrar
+setInterval(verificarBotones, 1000);
+
+// Cargar botones pendientes al iniciar la página
+verificarBotonesPendientes();
+
+</script>
+  <script>
+        // Mensajes por rango horario
+        const messages = {
+            madrugada: [
+                "La calma de la madrugada es el momento para escuchar tus pensamientos.",
+                "El mundo está en silencio, pero dentro de ti hay grandes sueños.",
+                "El primer paso hacia tus sueños comienza cuando todos descansan.",
+                "La oscuridad de la madrugada te prepara para un nuevo amanecer.",
+                "Los mejores logros surgen en la quietud de la madrugada.",
+                "Aunque todos duermen, tú estás despertando a nuevas oportunidades.",
+                "Aprovecha la madrugada para establecer tus metas.",
+                "La madrugada te invita a preparar lo que otros descubrirán más tarde.",
+                "El sol aún no ha salido, pero tu energía ya está a punto de brillar.",
+                "La madrugada es tu aliado cuando buscas tranquilidad para avanzar.",
+                "Mientras el mundo duerme, tú ya estás dando pasos hacia el futuro.",
+                "En la calma de la madrugada, tus sueños se transforman en planes.",
+                "Es el momento ideal para empezar lo que otros aún no imaginan.",
+                "En la oscuridad de la madrugada, las estrellas te guiarán.",
+                "El descanso está cerca, pero primero debes sembrar las semillas de tu éxito.",
+                "No importa lo que piensen los demás, en la madrugada eres imparable."
+            ],
+            morning: [
+                "Hoy es un nuevo día para fortalecer tu poder y acercarte a tus metas. ¡Hazlo posible!",
+                "El sol sale para iluminar tu camino hacia el éxito. Avanza con determinación.",
+                "Cada proyecto que inicias hoy te acerca más a la grandeza. Sigue trabajando duro.",
+                "Tu poder está en constante crecimiento. Aprovecha este día para avanzar aún más.",
+                "El dinero no es solo una recompensa, es el resultado de tu esfuerzo y dedicación. Hoy es un buen día para ganar más.",
+                "Recuerda cuidar tu salud; sin ella, ningún logro será posible. ¡Hazlo por ti!",
+                "El esfuerzo de ayer te ha traído hasta aquí, y el esfuerzo de hoy te llevará mucho más lejos.",
+                "Cada día es una oportunidad para avanzar en tus proyectos. No dejes pasar ni uno solo.",
+                "El camino al éxito está lleno de pequeños logros. Celebra cada paso que das.",
+                "No subestimes el poder de las pequeñas acciones diarias. Hoy es un buen día para hacer crecer tu influencia.",
+                "Tu salud es tu mayor tesoro. Hoy es un buen día para fortalecerla aún más.",
+                "Cada moneda que ganes hoy es un testamento a tu esfuerzo constante. ¡Sigue adelante!",
+                "Los proyectos más grandes comienzan con un pequeño paso. Da el primero hoy.",
+                "La disciplina de hoy construye el poder de mañana. No pierdas ni un momento.",
+                "Avanza, aunque sea a pasos pequeños. Todo progreso cuenta, y hoy es otro día para mejorar.",
+                "Cada amanecer es una nueva oportunidad para conquistar tus sueños y llevar tu poder al siguiente nivel."
+            ],
+            noon: [
+                "Ya has recorrido un largo camino, pero aún hay mucho por hacer. Mantente enfocado.",
+                "Medio día y ya has dado grandes pasos. Es momento de seguir avanzando hacia tus metas.",
+                "Cada esfuerzo que haces hoy te acerca más a la abundancia. Sigue trabajando con dedicación.",
+                "El mediodía es un recordatorio de que el día aún tiene mucho que ofrecer. No pares, sigue creciendo.",
+                "Recuerda que la verdadera riqueza se construye a diario, ¡y hoy estás un paso más cerca!",
+                "Tu salud es clave para todo lo demás. Aprovecha este momento para reponer energías y seguir adelante.",
+                "Los proyectos toman tiempo, pero con cada hora que pasa, te acercas a la realización. ¡No te detengas!",
+                "En este mediodía, es momento de reflexionar sobre tu progreso. ¡Ya estás más cerca del éxito!",
+                "Cada desafío enfrentado te hace más fuerte. Este es solo otro paso hacia tus objetivos.",
+                "El poder no se alcanza de un día para otro, pero cada acción que tomes hoy te lo acercará más.",
+                "A mediodía, recuerda que cada pequeña victoria se suma al gran logro. Estás haciendo un excelente trabajo.",
+                "La clave para alcanzar grandes cosas está en el progreso constante. ¡Hoy es otro día para avanzar!",
+                "Tienes el control de tus logros. Sigue poniendo el esfuerzo necesario y verás los frutos.",
+                "El dinero y el poder no son solo metas, son consecuencias de tu trabajo constante. ¡Sigue así!",
+                "Recuerda que los mejores proyectos requieren paciencia. Estás construyendo algo increíble.",
+                "En este mediodía, asegúrate de recargar fuerzas y seguir con la misma pasión que al inicio."
+            ],
+            afternoon: [
+                "La tarde es tu oportunidad para avanzar. ¡No dejes que el ritmo baje!",
+                "Revisa tus metas y ajusta lo necesario. Cada paso cuenta.",
+                "Aprovecha esta hora para hacer ajustes. El éxito es cuestión de detalles.",
+                "Si te sientes cansado, haz una pausa, pero sigue adelante con enfoque.",
+                "La tarde te acerca a tus sueños. ¡Sigue empujando!",
+                "Cada tarea completada te acerca más a tu objetivo. ¡Sigue trabajando!",
+                "Evalúa lo que has logrado y ajusta tu camino. ¡Aprovecha la tarde!",
+                "Concentra tu energía en lo más importante. Cada acción cuenta.",
+                "Es un buen momento para revisar tus avances. ¡Ajusta y sigue!",
+                "Cuida de tu salud mientras trabajas. ¡Un pequeño descanso puede recargar tu energía!",
+                "No pierdas de vista lo que has logrado. ¡La tarde es clave para el avance!",
+                "La tarde es el momento ideal para reforzar lo aprendido. ¡No pierdas oportunidad!",
+                "No olvides ajustar tus proyectos. La tarde es clave para el éxito.",
+                "Recuerda que el progreso no siempre es inmediato, pero cada paso cuenta.",
+                "Usa la tarde para enfocarte en lo que realmente importa. ¡No te distraigas!",
+                "Mantén el enfoque en tus metas, ajusta lo que sea necesario y sigue avanzando."
+            ],
+            night: [
+                "Descansa, mi sucesor. La fuerza del dragón crece mientras duermes.",
+                "Hoy avanzaste, pero aún queda mucho por conquistar. ¡Recarga tus energías!",
+                "La noche es el momento del descanso, pero también de la reflexión sobre tu poder.",
+                "Has dado un paso más hacia tu destino. Mañana será el siguiente desafío.",
+                "El dragón no descansa, pero tú lo harás esta noche para ser más fuerte mañana.",
+                "Recuerda que cada momento de descanso es una estrategia para el futuro. ¡Prepara tu mente para lo que viene!",
+                "Hoy enfrentaste pruebas, mañana serán más difíciles. El descanso es parte de la preparación.",
+                "Mi poder está en tus manos, pero debes descansar para poder usarlo sabiamente mañana.",
+                "La jornada de hoy no es más que un pequeño paso. Mañana, tu fuerza será mayor.",
+                "Tu poder crece cada día, pero recuerda que el descanso es esencial para mantenerlo.",
+                "La noche es el tiempo del dragón para reflexionar y fortalecer su voluntad. Haz lo mismo.",
+                "Lo que hagas esta noche determinará tu poder mañana. Reflexiona sobre tu camino.",
+                "Los dragones no temen a la oscuridad, y tú tampoco. Usa esta noche para prepararte.",
+                "Hoy avanzaste, pero hay más por hacer. Mañana se presentará el verdadero desafío.",
+                "El dragón no tiene fin, y tú tampoco lo tendrás si sigues fortaleciéndote.",
+                "Al igual que el dragón, tú debes descansar para que mañana tu fuego sea aún más intenso."
+            ]
+        };
+
+        // Obtener la hora actual
+        const currentHour = new Date().getHours();
+
+        let timeOfDay;
+
+        // Determinar el rango horario
+        if (currentHour >= 0 && currentHour < 6) {
+            timeOfDay = "madrugada";
+        } else if (currentHour >= 6 && currentHour < 12) {
+            timeOfDay = "morning";
+        } else if (currentHour >= 12 && currentHour < 13) {
+            timeOfDay = "noon";
+        } else if (currentHour >= 13 && currentHour < 18) {
+            timeOfDay = "afternoon";
+        } else {
+            timeOfDay = "night";
+        }
+
+        // Mostrar un mensaje aleatorio y actualizarlo periódicamente
+        function showRandomMessage() {
+            const randomMessage = messages[timeOfDay][Math.floor(Math.random() * messages[timeOfDay].length)];
+            document.getElementById("message").textContent = randomMessage;
+        }
+
+        // Mostrar un mensaje inicial
+        showRandomMessage();
+
+        // Cambiar el mensaje cada 10 segundos (10000 milisegundos)
+        setInterval(showRandomMessage, 10000);
+    </script>
+
+<script>
+    const openBtn = document.getElementById('openBtn');
+    const popup = document.getElementById('popup');
+    const closeBtn = document.getElementById('closeBtn');
+
+    openBtn.addEventListener('click', () => {
+      popup.style.display = 'block';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  </script>
+    <button id="clearCacheButton" title="Reiniciar Programa a 0"><span class="iconify" data-icon="mdi:restart"></span></button>
+
+     <script>
+        // Función para permitir solo números y limitar a 2 dígitos
+        function validarNumero(input) {
+            // Solo permitir que se ingresen números
+            input.value = input.value.replace(/[^0-9]/g, '');
+            
+            // Limitar a 2 dígitos
+            if (input.value.length > 2) {
+                input.value = input.value.slice(0, 2);
+            }
+        }
+    </script>
+    <script>
+        document.getElementById('clearCacheButton').addEventListener('click', function() {
+            // Eliminar el caché de la página
+            if ('caches' in window) {
+                caches.keys().then(function(cacheNames) {
+                    cacheNames.forEach(function(cacheName) {
+                        caches.delete(cacheName);
+                    });
+                });
+            }
+
+            // Eliminar el localStorage de la página
+            localStorage.clear();
+
+            alert('Caché y localStorage eliminados');
+        });
+    </script>
+</body>
+</html>
+
