@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bingo Simple</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f8ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            color: #333;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .game-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        /* Panel Izquierdo: Cartón */
+        .card-section {
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .bingo-card {
+            display: grid;
+            grid-template-columns: repeat(5, 60px);
+            grid-template-rows: 50px repeat(5, 60px);
+            gap: 5px;
+            margin-top: 10px;
+        }
+
+        .header-cell {
+            background-color: #3498db;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+        }
+
+        .cell {
+            background-color: #ecf0f1;
+            border: 2px solid #bdc3c7;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s;
+            user-select: none;
+        }
+
+        .cell:hover {
+            background-color: #d5dbdb;
+        }
+
+        .cell.marked {
+            background-color: #e74c3c;
+            color: white;
+            border-color: #c0392b;
+            transform: scale(0.95);
+        }
+
+        .cell.free {
+            background-color: #f1c40f;
+            color: #2c3e50;
+            font-size: 14px;
+        }
+
+        /* Panel Derecho: Controls y Bolas */
+        .controls-section {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .current-ball-display {
+            background: #2c3e50;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        .ball-large {
+            width: 80px;
+            height: 80px;
+            background: radial-gradient(circle at 30% 30%, #ffffff, #bdc3c7);
+            color: #2c3e50;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            font-weight: bold;
+            margin: 10px auto;
+            border: 4px solid #3498db;
+            box-shadow: inset -5px -5px 10px rgba(0,0,0,0.2);
+        }
+
+        .buttons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: bold;
+        }
+
+        .btn-draw { background-color: #2ecc71; color: white; }
+        .btn-draw:hover { background-color: #27ae60; }
+        .btn-draw:disabled { background-color: #95a5a6; cursor: not-allowed; }
+
+        .btn-reset { background-color: #e67e22; color: white; }
+        .btn-reset:hover { background-color: #d35400; }
+
+        .history-container {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            flex-grow: 1;
+        }
+
+        .history-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+            gap: 5px;
+            margin-top: 10px;
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .mini-ball {
+            width: 30px;
+            height: 30px;
+            background-color: #3498db;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+
+        .message {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 18px;
+            min-height: 27px;
+        }
+        .win { color: #e74c3c; animation: pulse 1s infinite; }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @media (max-width: 600px) {
+            .bingo-card {
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: 40px repeat(5, 1fr);
+                width: 100%;
+            }
+            .cell { font-size: 16px; }
+            .header-cell { font-size: 18px; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎰 Bingo Simple</h1>
+
+    <div class="game-container">
+        <!-- Sección del Cartón -->
+        <div class="card-section">
+            <h2>Tu Cartón</h2>
+            <p style="font-size: 0.9em; color: #666;">Haz clic en los números para marcarlos</p>
+            <div class="bingo-card" id="bingoCard">
+                <!-- Headers -->
+                <div class="header-cell">B</div>
+                <div class="header-cell">I</div>
+                <div class="header-cell">N</div>
+                <div class="header-cell">G</div>
+                <div class="header-cell">O</div>
+                <!-- Cells will be generated by JS -->
+            </div>
+            <div id="winMessage" class="message"></div>
+        </div>
+
+        <!-- Sección de Controles -->
+        <div class="controls-section">
+            <div class="current-ball-display">
+                <div>Bola Actual</div>
+                <div class="ball-large" id="currentBall">-</div>
+                <div class="buttons">
+                    <button class="btn-draw" id="drawBtn" onclick="drawBall()">Sacar Bola</button>
+                    <button class="btn-reset" onclick="initGame()">Reiniciar</button>
+                </div>
+            </div>
+
+            <div class="history-container">
+                <h3>Bolas Salidas</h3>
+                <div class="history-grid" id="historyGrid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let cardNumbers = [];
+        let drawnBalls = [];
+        let availableBalls = [];
+        let isGameOver = false;
+
+        // Inicializar el juego
+        function initGame() {
+            cardNumbers = generateCard();
+            drawnBalls = [];
+            availableBalls = Array.from({length: 75}, (_, i) => i + 1);
+            isGameOver = false;
+            
+            renderCard();
+            resetBoardUI();
+            document.getElementById('winMessage').textContent = '';
+            document.getElementById('winMessage').className = 'message';
+            document.getElementById('drawBtn').disabled = false;
+        }
+
+        // Generar cartón válido
+        function generateCard() {
+            const getRand = (min, max) => {
+                const nums = new Set();
+                while(nums.size < 5) {
+                    nums.add(Math.floor(Math.random() * (max - min + 1)) + min);
+                }
+                return Array.from(nums);
+            };
+
+            const colB = getRand(1, 15);
+            const colI = getRand(16, 30);
+            const colG = getRand(46, 60);
+            const colO = getRand(61, 75);
+            
+            // Columna N solo necesita 4 números porque el centro es libre
+            const colN_4 = getRand(31, 45); 
+            const finalColN = [colN_4[0], colN_4[1], 'FREE', colN_4[2], colN_4[3]];
+
+            let finalCard = [];
+            for(let r=0; r<5; r++) {
+                finalCard.push([
+                    colB[r],
+                    colI[r],
+                    finalColN[r],
+                    colG[r],
+                    colO[r]
+                ]);
+            }
+            return finalCard;
+        }
+
+        // Renderizar el cartón en el HTML
+        function renderCard() {
+            const container = document.getElementById('bingoCard');
+            // Limpiar solo las celdas, mantener headers (los primeros 5 hijos)
+            while(container.children.length > 5) {
+                container.removeChild(container.lastChild);
+            }
+
+            for(let r=0; r<5; r++) {
+                for(let c=0; c<5; c++) {
+                    const val = cardNumbers[r][c];
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.dataset.row = r;
+                    cell.dataset.col = c;
+
+                    if(val === 'FREE') {
+                        cell.classList.add('marked', 'free');
+                        cell.textContent = '★';
+                    } else {
+                        cell.textContent = val;
+                        cell.onclick = () => toggleMark(cell);
+                    }
+                    container.appendChild(cell);
+                }
+            }
+        }
+
+        // Marcar/Desmarcar celda
+        function toggleMark(element) {
+            if(isGameOver) return;
+            element.classList.toggle('marked');
+            checkAutoWin(); // Verificar si ganó manualmente
+        }
+
+        // Sacar bola
+        function drawBall() {
+            if(availableBalls.length === 0 || isGameOver) {
+                if(availableBalls.length === 0 && !isGameOver) {
+                    alert("¡Se han sacado todas las bolas!");
+                    isGameOver = true;
+                    document.getElementById('drawBtn').disabled = true;
+                }
+                return;
+            }
+
+            const randomIndex = Math.floor(Math.random() * availableBalls.length);
+            const ball = availableBalls.splice(randomIndex, 1)[0];
+            drawnBalls.push(ball);
+
+            // Actualizar UI
+            const letter = ball <= 15 ? 'B' : ball <= 30 ? 'I' : ball <= 45 ? 'N' : ball <= 60 ? 'G' : 'O';
+            document.getElementById('currentBall').textContent = `${letter}${ball}`;
+            
+            // Agregar al historial
+            const histItem = document.createElement('div');
+            histItem.className = 'mini-ball';
+            histItem.textContent = ball;
+            document.getElementById('historyGrid').prepend(histItem);
+
+            // Resaltar número en el cartón temporalmente
+            highlightNumberOnCard(ball);
+        }
+
+        function highlightNumberOnCard(num) {
+            const cells = document.querySelectorAll('.cell');
+            cells.forEach(cell => {
+                if(cell.textContent == num) {
+                    cell.style.borderColor = '#e74c3c';
+                    cell.style.borderWidth = '3px';
+                    setTimeout(() => {
+                        if(!cell.classList.contains('marked')) {
+                            cell.style.borderColor = '#bdc3c7';
+                            cell.style.borderWidth = '2px';
+                        }
+                    }, 1000);
+                }
+            });
+        }
+
+        function resetBoardUI() {
+            document.getElementById('currentBall').textContent = '-';
+            document.getElementById('historyGrid').innerHTML = '';
+            document.getElementById('drawBtn').disabled = false;
+        }
+
+        // Verificar victoria (Lógica de Bingo)
+        function checkAutoWin() {
+            const cells = document.querySelectorAll('.cell');
+            // Construir matriz de estado (true si marcado)
+            let grid = Array(5).fill().map(() => Array(5).fill(false));
+
+            cells.forEach(cell => {
+                const r = parseInt(cell.dataset.row);
+                const c = parseInt(cell.dataset.col);
+                if(cell.classList.contains('marked')) {
+                    grid[r][c] = true;
+                }
+            });
+
+            let won = false;
+
+            // Check filas
+            for(let r=0; r<5; r++) {
+                if(grid[r].every(val => val === true)) won = true;
+            }
+            // Check columnas
+            for(let c=0; c<5; c++) {
+                let colMatch = true;
+                for(let r=0; r<5; r++) {
+                    if(!grid[r][c]) colMatch = false;
+                }
+                if(colMatch) won = true;
+            }
+            // Diagonales
+            if(grid[0][0] && grid[1][1] && grid[2][2] && grid[3][3] && grid[4][4]) won = true;
+            if(grid[0][4] && grid[1][3] && grid[2][2] && grid[3][1] && grid[4][0]) won = true;
+
+            if(won && !isGameOver) {
+                isGameOver = true;
+                const msg = document.getElementById('winMessage');
+                msg.textContent = '¡BINGO! ¡Has ganado! 🎉';
+                msg.classList.add('win');
+                document.getElementById('drawBtn').disabled = true;
+                
+                // Efecto de celebración simple
+                confettiEffect();
+            }
+        }
+
+        function confettiEffect() {
+            // Un simple cambio de color de fondo temporal
+            const originalBg = document.body.style.backgroundColor;
+            let count = 0;
+            const interval = setInterval(() => {
+                document.body.style.backgroundColor = count % 2 === 0 ? '#ffeaa7' : '#fab1a0';
+                count++;
+                if(count > 6) {
+                    clearInterval(interval);
+                    document.body.style.backgroundColor = '#f0f8ff';
+                }
+            }, 300);
+        }
+
+        // Iniciar al cargar
+        initGame();
+
+    </script>
+</body>
+</html>
